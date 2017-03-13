@@ -11,8 +11,13 @@ import java.util.Collection;
 import static java.lang.System.out;
 
 public class StoreCredit {
+
     private static final String DATA_SET_NAME = "store-credit-large.in";
     private static final Logger logger = LoggerFactory.getLogger(StoreCredit.class);
+
+    private StoreCredit() {
+
+    }
 
     public static void main(String[] args) {
         CaseLoader<StoreCreditCase> caseLoader = new StoreCreditCaseLoader(DATA_SET_NAME);
@@ -21,8 +26,8 @@ public class StoreCredit {
             logger.info("{}", cases.size());
             int index = 0;
             for (StoreCreditCase creditCase : cases) {
-                out.println(String.format("Case %d: %s", index, creditCase.solve().getKey()));
                 index++;
+                out.println(String.format("Case #%d: %s", index, creditCase.solve()));
             }
         } catch (IOException e) {
             logger.error("Failed to load data set {}", DATA_SET_NAME);

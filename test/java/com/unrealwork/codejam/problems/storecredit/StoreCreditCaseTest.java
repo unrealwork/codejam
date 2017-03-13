@@ -25,6 +25,13 @@ public class StoreCreditCaseTest {
                                 integerList(new int[]{5, 75, 25})
                         )
                         , new Pair<>(2, 3)
+                },
+                {
+                        new StoreCreditCase(
+                                8,
+                                integerList(new int[]{2, 1, 9, 4, 4, 56, 90, 3})
+                        )
+                        , new Pair<>(4, 5)
                 }
         };
     }

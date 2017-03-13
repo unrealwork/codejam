@@ -15,6 +15,14 @@ public class StoreCreditCase implements Case<Pair<Integer>> {
     }
 
     @Override
+    public String toString() {
+        return "StoreCreditCase{" +
+                "items=" + items +
+                ", credit=" + credit +
+                '}';
+    }
+
+    @Override
     public Pair<Integer> solve() {
         Map<Integer, Set<Integer>> indexMap = new HashMap<>();
         int index = 0;

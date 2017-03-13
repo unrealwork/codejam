@@ -15,7 +15,7 @@ public class StoreCreditCaseLoader extends AbstcractCaseLoader<StoreCreditCase> 
 
     @Override
     public Collection<StoreCreditCase> parseCases(BufferedReader reader) throws IOException {
-        Set<StoreCreditCase> result = new HashSet<>();
+        List<StoreCreditCase> result = new ArrayList<>();
         Integer caseCount = Integer.parseInt(reader.readLine());
         for (int i = 0; i < caseCount; i++) {
             Integer credit = Integer.parseInt(reader.readLine());
